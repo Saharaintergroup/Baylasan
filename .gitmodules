@@ -1,0 +1,4 @@
+[submodule "CybroOdoo/CybroAddons"]
+	path = CybroOdoo/CybroAddons
+	url = git@github.com:CybroOdoo/CybroAddons.git
+	branch = 12.0
