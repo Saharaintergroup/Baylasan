@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sah_belsan_sah_belsan,sah_belsan.sah_belsan,model_sah_belsan_sah_belsan,,1,0,0,0
