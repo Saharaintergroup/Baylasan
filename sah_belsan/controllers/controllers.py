@@ -8,7 +8,7 @@ from odoo import http
 
 #     @http.route('/sah_belsan/sah_belsan/objects/', auth='public')
 #     def list(self, **kw):
-#         return http.request.render('sah_belsan.listing', {
+#         return http.request.render('sah_belsan.listing', { 
 #             'root': '/sah_belsan/sah_belsan',
 #             'objects': http.request.env['sah_belsan.sah_belsan'].search([]),
 #         })
