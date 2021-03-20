@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+    <!-- Inherit Form View to Modify it -->
+
+
+      <!-- Inherit Form View to Modify it -->
+      <record id="inherit_form_product_old" model="ir.ui.view">
+          <field name="name">inherit_form_product_old</field>
+          <field name="model">product.template</field>
+          <field name="inherit_id" ref="product.product_template_form_view"/>
+          <field name="arch" type="xml">
+
+              <xpath expr="//field[@name='name']" position="after">
+                 <field name="old_products" invisible="1"/>
+              </xpath>
+
+          </field>
+      </record>
+      <record id="Inherit_form_old_products" model="ir.ui.view">
+        <field name="name">Inherit_form_old_products</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
+        <field name="arch" type="xml">
+
+          <filter name="real_stock_available" position="after">
+            <filter name="old_products" string="OLD Products" domain="[('old_products', '=', True)]"/>
+          </filter>
+
+        </field>
+    </record>
+  </data>
+</odoo>
