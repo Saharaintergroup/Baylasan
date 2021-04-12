@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sah_belsan" inherit_id="website.theme_customize" name="Belsan Theme Modal">
+        <xpath expr="//div" position="replace">
+            <div>
+
+                <content id="theme_customize_content_header" string="Header" title="Choose header">
+                    <!-- In a <more/> so that it is on a new line if themes add options before -->
+                    <more data-depends="">
+                        <list string="Header" id="customheader">
+                            <opt id="option_header_layout_1" string="Belsan Header" data-xmlid="sah_belsan.header_layout_1" data-reload="/"/>
+                            <opt id="option_header_layout_2" string="Default Odoo Header" data-xmlid="sah_belsan.header_layout_2" data-reload="/"/>
+                        </list>
+                    </more>
+                </content>
+
+                 <content id="theme_customize_content_footer" string="Footer" title="Choose Footer">
+                    <more data-depends="">
+                        <list string="Footer" id="customfotter">
+                            <opt id="option_footer_layout_1" string="Belsan Footer" data-xmlid="sah_belsan.footer_layout_1" data-reload="/"/>
+                            <opt id="option_footer_layout_2" string="Default Odoo Footer" data-xmlid="sah_belsan.footer_layout_2" data-reload="/"/>
+                        </list>
+                    </more>
+                </content>
+
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

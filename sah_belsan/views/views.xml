@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+
+    <template id="belsan_add_to_cart" inherit_id="website_sale.products_add_to_cart" name="Belsan Add to Cart">
+      <xpath expr="//a/span[hasclass('fa-shopping-cart')]" position="replace">
+            <i class="fa fa-shopping-cart" />
+      </xpath>
+    </template>
+
+    <template id="belsan_add_to_wishlist" name='Add to wishlist' inherit_id="website_sale_wishlist.add_to_wishlist" priority="20">
+        <xpath expr="//button/span[hasclass('fa-heart')]" position="replace">
+            <i class="fa fa-heart" />
+        </xpath>
+    </template>
+
+
+
+
+  </data>
+</odoo>
