@@ -748,6 +748,6 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
     left: 70% !important;
     right: unset !important;
 }
-.owl-carousel .owl-stage-outer{
+.o_rtl .owl-carousel .owl-stage-outer{
     direction: ltr !important;
 }
