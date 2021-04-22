@@ -721,6 +721,10 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
 .row.o_website_rating_card_container {
     text-align: left;
 }
+#oe_main_menu_navbar.o_main_navbar > ul.o_menu_systray.d-none.d-md-block
+{
+    float: right !important;
+}
 #oe_main_menu_navbar > ul.o_menu_systray{
     float: unset !important;
 }
@@ -743,4 +747,7 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
 .dropdown_sorty_by.show .dropdown-menu.show{
     left: 70% !important;
     right: unset !important;
+}
+.owl-carousel .owl-stage-outer{
+    direction: ltr !important;
 }
