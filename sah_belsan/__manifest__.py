@@ -32,5 +32,4 @@
         'data/pages.xml',
     ],
     # only loaded in demonstration mode
-
 }
