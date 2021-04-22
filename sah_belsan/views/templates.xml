@@ -45,11 +45,11 @@
 
                 <div class="belsan_nav_search_container belsan_nav_search_open">
                     <div class="belsan_nav_search">
-                        <form action="/news" method="GET">
+                        <form action="/shop" method="GET">
                             <div class="input-group belsan_header_search_bar">
                                 <i class="fa fa-search belsan_header_search_icon" onclick="searchFun()"></i>
                                 <div id="belsan_header_search_input">
-                                    <input type="text" class="search-query form-control oe_search_box" name="search" aria-label="Search" placeholder=".. عن ماذا تبحث" required="required" />
+                                    <input type="text" class="search-query form-control oe_search_box" name="search" aria-label="Search" placeholder="عن ماذا تبحث .." required="required" />
                                     <button type="submit" class="btn btn-link oe_search_button belsan_btn_search_icon">
                                         ابحث
                                     </button>
@@ -59,6 +59,9 @@
                     </div>
                 </div>
 
+            </xpath>
+            <xpath expr="//header/nav" position="after">
+                <t t-call="sah_belsan.homepage_categories"/>
             </xpath>
         </template>
 
@@ -147,22 +150,22 @@
 
                                 <ul class="list-unstyled">
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/shop/cart">الرئيسية</a>
+                                        <a class="footer_page" href="/">الرئيسية</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/shop/wishlist">الأسئلة الشائعة</a>
+                                        <a class="footer_page" href="#">الأسئلة الشائعة</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/shop/payment">تواصل معنا</a>
+                                        <a class="footer_page" href="#">تواصل معنا</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/my/account">تتبع الطلب</a>
+                                        <a class="footer_page" href="#">تتبع الطلب</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/privacy-policy">طلباتي</a>
+                                        <a class="footer_page" href="#">طلباتي</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/privacy-policy">الشحن</a>
+                                        <a class="footer_page" href="#">الشحن</a>
                                     </li>
                                 </ul>
                             </div>
@@ -242,6 +245,8 @@
                 </t>
             </xpath>
         </template>
+
+
 
     </data>
 </odoo>

@@ -29,7 +29,9 @@
         'views/assets.xml',
         'views/templates.xml',
         'views/product.xml',
+        'views/slider_products.xml',
         'data/pages.xml',
     ],
     # only loaded in demonstration mode
+
 }

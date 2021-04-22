@@ -18,6 +18,52 @@ $(function() {
     $('body').on('click', '.o_header_affix .langs_dropdown', function(e) {
         e.stopPropagation();
     });
+
+    $('.owl-quick-access').owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 5,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            300: {
+                items: 2
+            },
+            576: {
+                items: 3
+            },
+            768: {
+                items: 4
+            },
+            992: {
+                items: 5
+            },
+            1200: {
+                items: 10
+            }
+        },
+    })
+    $('.owl-product-home').owlCarousel({
+        items: 4,
+        margin: 1,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 4
+            }
+        },
+    });
+
+
 })
 function searchFun() {
   var x = document.getElementById("belsan_header_search_input");
