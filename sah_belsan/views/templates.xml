@@ -148,7 +148,7 @@
                                         <a target="_blank" t-att-href="website.social_youtube"><i class="fa fa-snapchat-ghost"></i></a>
                                     </li>
                                     <li class="contact_information_social_icons">
-                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=00201002212225"><i class="fa fa-whatsapp"></i></a>
+                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=0925838044"><i class="fa fa-whatsapp"></i></a>
                                     </li>
                                 </ul>
 
@@ -159,13 +159,22 @@
 
                                 <ul class="list-unstyled">
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/shop/category/twr-2">عطور</a>
+                                        <a class="footer_page" href="/shop/category/twr-1">عطور</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/shop/category/ny-blbshr-5">عناية بالبشرة</a>
+                                        <a class="footer_page" href="/shop/category/mkyj-2">مكياج</a>
                                     </li>
                                     <li class="footer_page_list">
-                                        <a class="footer_page" href="/shop/category/mkyj-4">مكياج</a>
+                                        <a class="footer_page" href="/shop/category/ny-blbshr-3">عناية بالبشرة</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/category/ny-bljsm-5">عناية بالجسم</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/category/ny-blsh-r-6">عناية بالشعر</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/category/l-lmt-ltjry-7">العلامات التجارية </a>
                                     </li>
                                 </ul>
                             </div>
@@ -197,18 +206,18 @@
                                 <ul class="list-unstyled p-0">
                                     <li class="footer_page_list footer_address">
                                         <i class="fa fa-map-marker"></i>
-                                        <P class="footer_page_address">مقر الشركة منطقة جامع الصقع</P>
-                                        <P class="footer_page_address_phone">0925838044</P>
+                                        <P class="footer_page_address">منطقة جامع الصقع</P>
+                                        <P class="footer_page_address_phone">+218925838044</P>
                                     </li>
                                     <li class="footer_page_list footer_address">
                                         <i class="fa fa-map-marker"></i>
                                         <P class="footer_page_address"> شارع الجرابه امام مصحة اليبيى السوسرى</P>
-                                        <P class="footer_page_address_phone">0915668888</P>
+                                        <P class="footer_page_address_phone">+2180915668888</P>
                                     </li>
                                     <li class="footer_page_list footer_address">
                                         <i class="fa fa-map-marker"></i>
                                         <P class="footer_page_address">شارع الجرابه امام مطعم الشويا</P>
-                                        <P class="footer_page_address_phone">0919778888</P>
+                                        <P class="footer_page_address_phone">+2180919778888</P>
                                     </li>
                                 </ul>
 
@@ -324,11 +333,11 @@
                             <p class="alert alert-success" t-if="message" role="status">
                                 <t t-esc="message"/>
                             </p>
-                            <!--                            <div class="text-center">-->
-                            <!--                                <a href="/web/reset_password?" class="forget_pass">هل نسيت كلمة المرور ؟</a>-->
-                            <!--                            </div>-->
+                            <div class="text-center">
+                                <a href="/web/reset_password?" class="forget_pass">هل نسيت كلمة المرور ؟</a>
+                            </div>
 
-                            <div t-attf-class="clearfix oe_login_buttons sign_in_form_custom mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                            <div t-attf-class="clearfix oe_login_buttons sign_in_form_custom mb-1 {{'pt-2' if form_small else 'pt-3'}}" style="clear: both;">
                                 <button type="submit" class="btn form_btn btn-lg login_in_btn">تسجيل الدخول</button>
                                 <t t-if="debug">
                                     <button type="submit" name="redirect" value="/web/become" class="btn btn-link btn-sm btn-block">Log in as superuser</button>

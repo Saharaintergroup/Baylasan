@@ -913,11 +913,17 @@ li.contact_information_item {
     line-height: 2;
     font-size: 15px;
 }
+.why_about_us_sec{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.41), rgba(221, 221, 221, 0.25));
+    padding: 3rem 0px;
+    margin-bottom: 3rem;
+}
 .about_services_grid{
     border-radius: 30px;
     box-shadow: 0 0 56px 0 rgb(0 0 0 / 10%);
     background-color: #fff;
     padding: 3rem 3rem;
+    height: 300px;
     text-align: center;
 }
 .about_services_grid img{
@@ -926,14 +932,51 @@ li.contact_information_item {
     display: block;
     margin-bottom: 2rem;
 }
+.why_about_us_desc_title{
+    width: 65%;
+    margin: auto;
+}
+.why_about_us_desc_title p{
+    color: #acacac;
+}
+.about_counter_grid{
+    border-radius: 30px;
+    box-shadow: 0 0 56px 0 rgb(0 0 0 / 9%);
+    background-color: #fff;
+    padding: 3rem 3rem;
+    height: 182px;
+    background-image: url("../img/counter_bg.png");
+    background-size: 100% 100%;
+    padding: 3rem;
+    text-align: center;
+}
 .about_services_grid h5{
     color: #000044;
     font-weight: 600;
     margin-bottom: 1rem;
 }
-.about_services_grid p
+.about_counter_grid h3{
+    color: #ff22bb;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.about_services_grid p, .about_counter_grid p
 {
     color: #acacac;
+}
+.oe_login_form .sign_in_form_custom a:last-child{
+    display: none;
+}
+.forget_pass{
+    color: #7f7f7f !important;
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: right !important;
+    float: right;
+}
+.oe_reset_password_form .justify-content-between{
+    display: inline-block !important;
 }
 .about_baylsan_title{
     color: #ee65c6;

@@ -29,7 +29,7 @@
                                                         <div class="carousel_heder_title">
                                                             <h1>أحدث المنتجات الخاصة بالعطور</h1>
                                                             <h5>من أرقى الماركات العالمية</h5>
-                                                            <a href="/shop/category/twr-2" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
+                                                                <a href="/shop/category/twr-1" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
                                                             </a>
                                                         </div>
                                                     </div>
@@ -40,7 +40,7 @@
                                                         <div class="carousel_heder_title">
                                                             <h1>أحدث المنتجات الخاصة بالمكياج</h1>
                                                             <h5>من أرقى الماركات العالمية</h5>
-                                                            <a href="/shop/category/mkyj-4" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
+                                                            <a href="/shop/category/mkyj-2" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
                                                             </a>
                                                         </div>
                                                     </div>
@@ -52,7 +52,7 @@
                                                         <div class="carousel_heder_title">
                                                             <h1>أحدث المنتجات الخاصة بالعناية بالبشرة</h1>
                                                             <h5>من أرقى الماركات العالمية</h5>
-                                                            <a href="/shop/category/ny-blbshr-5" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
+                                                            <a href="/shop/category/ny-blbshr-3" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
                                                             </a>
                                                         </div>
                                                     </div>
@@ -165,7 +165,7 @@
                                 </div>
                             </section>
 
-                            <section class="about_us_sec">
+                            <section class="why_about_us_sec">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -209,11 +209,33 @@
                                             <div class="title_head_contain">
                                                 <div class="home_title wow bounceInLeft">
                                                     <h2 class="home_why_choose_title contact_page_title">عن بيلسان </h2>
-                                                    <img class="mt-5 mb-5 img-fluid" src="/sah_belsan/static/src/img/about_us_banner.png" />
-                                                    <h5 class="about_baylsan_title mb-3">هناك حقيقة مثبتة منذ زمن طويل</h5>
-                                                    <p class="about_us_des"> وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</p>
-                                                    <p class="about_us_des">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم.</p>
+                                                    <div class="text-center why_about_us_desc_title">
+                                                        <h5 class="about_baylsan_title mb-3">هناك حقيقة مثبتة منذ زمن طويل</h5>
+                                                        <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>
+                                                    </div>
+<!--                                                    <p class="about_us_des"> وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</p>-->
+<!--                                                    <p class="about_us_des">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم.</p>-->
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-lg-4">
+                                            <div class="about_counter_grid">
+                                                <h3>29,033</h3>
+                                                <p>المنتجات</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="about_counter_grid">
+                                                <h3> 29,033</h3>
+                                                <p> الماركات</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="about_counter_grid">
+                                                <h3> 29,033</h3>
+                                                <p> العروض</p>
                                             </div>
                                         </div>
                                     </div>
