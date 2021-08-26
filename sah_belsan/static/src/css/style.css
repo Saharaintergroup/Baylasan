@@ -983,7 +983,8 @@ li.contact_information_item {
     font-weight: 600;
 }
 .product_discount.Shop_details_disc{
-    margin-top: 7rem;
+    margin-top: 50%;
+    left: 0;
 }
 /******** language **************/
 /**********************/
