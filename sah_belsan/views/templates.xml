@@ -1,0 +1,408 @@
+<odoo>
+    <data>
+        <template id="header_layout_1" active="True" inherit_id="website.layout">
+
+            <xpath expr="//header/nav[hasclass('navbar-expand-md')]" position="attributes">
+                <attribute name="class">navbar navbar-expand-lg navbar-light navbar-fixed-top pages_nav</attribute>
+            </xpath>
+
+            <xpath expr="//header/nav/div/div[hasclass('navbar-collapse')]" position="attributes">
+                <attribute name="class">collapse navbar-collapse justify-content-end</attribute>
+            </xpath>
+
+            <xpath expr="//header/nav/div/div/ul[hasclass('navbar-nav')]" position="attributes">
+                <attribute name="class">nav navbar-nav total_pages</attribute>
+            </xpath>
+
+            <xpath expr="//header/nav[hasclass('navbar-expand-lg')]" position="before">
+                <div class="headr_contact_bg">
+                    <div class="container">
+                        <div class="headr_contact_bg_container">
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//header/nav/div/div/ul[hasclass('navbar-nav')]" position="after">
+
+                <div class="belsan_nav_search_container belsan_nav_search_open">
+
+                    <!--                    <div class="langs_dropdown col-sm text-center text-sm-right p-0">-->
+                    <!--                        <p class="choose_lang">-->
+                    <!--                            &lt;!&ndash;                        <t t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][2].split('/').pop()" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;                            <p t-esc="" />&ndash;&gt;-->
+                    <!--                            <i class="fa fa-angle-down ml-2"></i>-->
+                    <!--                            <ul class="js_language_selector m-0 p-0 list-inline langs_menu nav_menu_language" t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1) or (website and (editable or translatable))">-->
+                    <!--                                <li class="list-inline-item headr_login_list">-->
+                    <!--                                    <t t-foreach="languages" t-as="lg">-->
+                    <!--                                        <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])" class="dropdown-item js_change_lang" t-att-data-url_code="lg[0]">-->
+                    <!--                                            <t t-esc="lg[1].split('/').pop()"/>-->
+                    <!--                                        </a>-->
+                    <!--                                        <span class="belsan_lang_border"></span>-->
+                    <!--                                    </t>-->
+                    <!--                                </li>-->
+                    <!--                            </ul>-->
+                    <!--                        </p>-->
+                    <!--                    </div>-->
+
+
+                    <div class="belsan_nav_search">
+                        <form action="/shop" method="GET">
+                            <div class="input-group belsan_header_search_bar">
+                                <i class="fa fa-search belsan_header_search_icon" onclick="searchFun()"></i>
+                                <div id="belsan_header_search_input">
+                                    <input type="text" class="search-query form-control oe_search_box" name="search" aria-label="Search" placeholder="عن ماذا تبحث .." required="required" />
+                                    <button type="submit" class="btn btn-link oe_search_button belsan_btn_search_icon">
+                                        ابحث
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-nav ml-auto text-right" id="top_menu_login">
+                        <li class="nav-item divider" t-ignore="true" t-if="not user_id._is_public()"/>
+                        <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <b>
+                                    <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                </b>
+                            </a>
+                            <div class="dropdown-menu js_usermenu" role="menu">
+                                <a class="dropdown-item" t-attf-href="/my/home" role="menuitem">Account</a>
+                                <a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="js_language_selector lang_list_header mb0 list-inline" t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1) or (website and (editable or translatable))">
+                        <li class="list-inline-item">
+                            <div class="dropup">
+                                <button class="btn btn-sm lang_list_header_active dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()"/>
+                                    <span class="caret ml4"/>
+                                </button>
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-foreach="languages" t-as="lg">
+                                        <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+                                           class="dropdown-item js_change_lang"
+                                           t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+                                           t-att-data-lang="lg[0]">
+                                            <t t-esc="lg[1].split('/').pop()"/>
+                                        </a>
+                                    </t>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </xpath>
+            <xpath expr="//header/nav" position="after">
+                <t t-call="sah_belsan.homepage_categories"/>
+            </xpath>
+        </template>
+
+        <template id="product_add_to_wishlist" name='Add to wishlist in product page' inherit_id="website_sale.product" priority="20">
+            <xpath expr="//a[@id='add_to_cart']" position="after">
+                <t t-if="request.website.viewref('website_sale_wishlist.add_to_wishlist').active">
+                    <t t-set="product_variant" t-value="product_variant or product._create_first_product_variant()"/>
+                    <t t-set="in_wish" t-value="product.product_variant_ids &amp; request.env['product.wishlist'].current().mapped('product_id')"/>
+                    <a class="btn btn-default btn-xs slider_product_compare_icon o_add_wishlist" t-att-disabled='in_wish or None' title="Add to Wishlist" t-att-data-product-product-id="product.product_variant_ids[0].id" data-action="o_wishlist">
+                        <i class="fa fa-heart"></i>
+                    </a>
+                </t>
+            </xpath>
+
+        </template>
+
+        <template id="header_layout_2" active="False" inherit_id="website.layout">
+            <xpath expr="//header" position="before">
+
+            </xpath>
+        </template>
+
+
+        <template id="footer_layout_1" active="True" inherit_id="website.layout">
+            <xpath expr="//footer/div[@id='footer']" position="replace">
+                <!-- footer -->
+                <footer class="page-footer font-small stylish-color-dark">
+                    <div class="container">
+                        <!-- Grid row -->
+                        <div class="row">
+                            <!-- Grid column -->
+                            <div class="col-lg-3 col-md-6 footer_logo_img">
+                                <!-- Content -->
+                                <img src="/sah_belsan/static/src/img/logo_footer.png" class="img-fluid footer_logo_img"/>
+                                <p class="footer_description">جميع الحقوق محفوظة لدى بيلسان 2021</p>
+                                <ul class="mt-2 mb-5 p-0">
+                                    <li class="contact_information_social_icons">
+                                        <a target="_blank" t-att-href="website.social_facebook"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="contact_information_social_icons">
+                                        <a target="_blank" t-att-href="website.social_instagram"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li class="contact_information_social_icons">
+                                        <a target="_blank" t-att-href="website.social_youtube"><i class="fa fa-snapchat-ghost"></i></a>
+                                    </li>
+                                    <li class="contact_information_social_icons">
+                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=00201002212225"><i class="fa fa-whatsapp"></i></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 mt-2">
+                                <!-- Links -->
+                                <h5 class="footer_links mt-3 mb-4">لك سيدتي</h5>
+
+                                <ul class="list-unstyled">
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/category/twr-2">عطور</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/category/ny-blbshr-5">عناية بالبشرة</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/category/mkyj-4">مكياج</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mt-2">
+                                <!-- Links -->
+                                <h5 class="footer_links mt-3 mb-4">روابط سريعة</h5>
+
+                                <ul class="list-unstyled">
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/">الرئيسية</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/about_us">من نحن</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop">المتجر</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/shop/discount">الخصومات</a>
+                                    </li>
+                                    <li class="footer_page_list">
+                                        <a class="footer_page" href="/contact-us">تواصل معنا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mt-2">
+                                <!-- Links -->
+                                <h5 class="mt-3 mb-4 footer_links">محلاتنا</h5>
+                                <ul class="list-unstyled p-0">
+                                    <li class="footer_page_list footer_address">
+                                        <i class="fa fa-map-marker"></i>
+                                        <P class="footer_page_address">مقر الشركة منطقة جامع الصقع</P>
+                                        <P class="footer_page_address_phone">0925838044</P>
+                                    </li>
+                                    <li class="footer_page_list footer_address">
+                                        <i class="fa fa-map-marker"></i>
+                                        <P class="footer_page_address"> شارع الجرابه امام مصحة اليبيى السوسرى</P>
+                                        <P class="footer_page_address_phone">0915668888</P>
+                                    </li>
+                                    <li class="footer_page_list footer_address">
+                                        <i class="fa fa-map-marker"></i>
+                                        <P class="footer_page_address">شارع الجرابه امام مطعم الشويا</P>
+                                        <P class="footer_page_address_phone">0919778888</P>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!--                            <div class="col-lg-3 col-md-6 mt-2">-->
+                            <!--                                &lt;!&ndash; Links &ndash;&gt;-->
+                            <!--                                <h5 class="mt-3 mb-4 footer_links">اشترك لتحصل على أخر العروض</h5>-->
+                            <!--                                <form action="/website_form/" method="post"-->
+                            <!--                                      class="s_website_form  o_fake_not_editable footer_newsletter_form"-->
+                            <!--                                      enctype="multipart/form-data" data-name="Form Builder"-->
+                            <!--                                      data-model_name="mail.mail"-->
+                            <!--                                      data-success_page="/thanks_page">-->
+                            <!--                                    <div class="form-group form-field d-none">-->
+                            <!--                                        <label class="col-form-label" for="email_to"/>-->
+                            <!--                                        <input type="text" class="form-control o_website_form_input"-->
+                            <!--                                               name="email_to" value="support@domain.com"/>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="form-group form-field o_website_form_required_custom newsletter_form_contain">-->
+                            <!--                                        <input type="text"-->
+                            <!--                                               class="form-control o_website_form_input newsletter_form_input"-->
+                            <!--                                               name="email_from" required=""-->
+                            <!--                                               data-oe-model="ir.ui.view" data-oe-id="2651"-->
+                            <!--                                               data-oe-field="arch"-->
+                            <!--                                               data-oe-xpath="/data/xpath/t/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/div[1]/div[1]/input[1]"-->
+                            <!--                                               value="" placeholder="البريد الإلكتروني ...."/>-->
+                            <!--                                        <button title="SUBSCRIBE" role="button"-->
+                            <!--                                                class="btn btn-primary btn-lg btn_contact_form o_website_form_send o_default_snippet_text newsleter_form_btn">-->
+                            <!--                                            <span class="pl-1">اشترك</span>-->
+                            <!--                                        </button>-->
+                            <!--                                        <span id="o_website_form_result"/>-->
+                            <!--                                    </div>-->
+                            <!--                                </form>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer -->
+            </xpath>
+        </template>
+
+        <template id="footer_layout_2" active="False" inherit_id="website.layout">
+            <xpath expr="//footer/div[@id='footer']" position="inside">
+            </xpath>
+        </template>
+
+        <template id="layout_footer_copyright" inherit_id="website.layout_footer_copyright" name="Footer Copyright">
+            <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace"/>
+        </template>
+        <template id="inherit_website_shop" inherit_id="website_sale.products_item">
+            <xpath expr="//div[hasclass('product_price')]//b//span[2]" position="after">
+                <p itemprop="category" t-field="product.categ_id.name" class="product_category shop_product_category" style=" "></p>
+            </xpath>
+        </template>
+
+        <template id="inherit_website_shop_price" inherit_id="website_sale.product_price">
+            <xpath expr="//div[hasclass('product_price')]" position="inside">
+                <p itemprop="category" t-field="product.categ_id.name" class="product_category shop_product_category shop_details_category" style=" "></p>
+                <t t-if="product.discount">
+                    <span class="product_discount Shop_details_disc">خصم <span itemprop="discount" t-field="product.discount"
+                                                                               class="Shop_details_disc"></span> %</span>
+                </t>
+                <div class="o_not_editable">
+                    <p t-field="product.description_sale" class="text-right mt-5" />
+                </div>
+            </xpath>
+
+        </template>
+        <template id="inherit_website_shop_disc" inherit_id="website_sale.product">
+            <xpath expr="//div[@id='product_details']/div[hasclass('o_not_editable')]" position="replace"/>
+        </template>
+
+        <template id="inherit_website_shop_discount" inherit_id="website_sale.products_item">
+            <xpath expr="//div[hasclass('oe_product_image')]" position="inside">
+                <t t-if="product.discount">
+                    <span class="product_discount">خصم <span itemprop="discount" t-field="product.discount"
+                                                             class=""></span> %</span>
+                </t>
+            </xpath>
+        </template>
+
+
+        <template id="web.login" name="Login">
+            <t t-call="web.login_layout">
+                <section class="login_section">
+                    <div class="container">
+                        <form class="oe_login_form" role="form" t-attf-action="/web/login" method="post" onsubmit="this.action = this.action + location.hash">
+                            <h3 class="text-center mb-5">تسجيل الدخول</h3>
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                            <div class="form-group field-db" t-if="databases and len(databases) &gt; 1">
+                                <label for="db" class="col-form-label">Database</label>
+                                <div t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
+                                    <input type="text" name="db" t-att-value="request.db" id="db" t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required" readonly="readonly"/>
+                                    <span class="input-group-append">
+                                        <a role="button" href="/web/database/selector" class="btn btn-secondary">Select <i class="fa fa-database" role="img" aria-label="Database" title="Database"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group field-login">
+                                <input type="text"  placeholder="البريد الالكتروني" name="login" t-att-value="login" id="login" t-attf-class="form-control #{'form-control-sm' if form_small else ''} sign_in_inputs" required="required" autofocus="autofocus" autocapitalize="off"/>
+                            </div>
+
+                            <div class="form-group field-password">
+                                <input type="password" placeholder="كلمة المرور" name="password" id="password" t-attf-class="form-control #{'form-control-sm' if form_small else ''} sign_in_inputs" required="required" autocomplete="current-password" t-att-autofocus="'autofocus' if login else None" maxlength="4096"/>
+                            </div>
+
+                            <p class="alert alert-danger" t-if="error" role="alert">
+                                <t t-esc="error"/>
+                            </p>
+                            <p class="alert alert-success" t-if="message" role="status">
+                                <t t-esc="message"/>
+                            </p>
+                            <!--                            <div class="text-center">-->
+                            <!--                                <a href="/web/reset_password?" class="forget_pass">هل نسيت كلمة المرور ؟</a>-->
+                            <!--                            </div>-->
+
+                            <div t-attf-class="clearfix oe_login_buttons sign_in_form_custom mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                                <button type="submit" class="btn form_btn btn-lg login_in_btn">تسجيل الدخول</button>
+                                <t t-if="debug">
+                                    <button type="submit" name="redirect" value="/web/become" class="btn btn-link btn-sm btn-block">Log in as superuser</button>
+                                </t>
+                                <div class="o_login_auth"/>
+                            </div>
+                            <input type="hidden" name="redirect" t-att-value="redirect"/>
+                        </form>
+                    </div>
+                </section>
+            </t>
+        </template>
+
+
+
+        <template id="auth_signup.signup" name="Sign up login">
+            <t t-call="web.login_layout">
+                <section class="register_section">
+                    <div class="container">
+                        <form class="oe_signup_form" role="form" method="post" t-if="not message">
+                            <h3>تسجيل حساب جديد</h3>
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="form-row">
+                                <div class="form-group field-name col-md-12">
+                                    <label for="name" class="col-form-label">اﻷسم الثلاثي</label>
+                                    <input type="text" name="name" t-att-value="name" id="name" class="form-control o_website_form_input form-control-sm" placeholder="اﻷسم الثلاثي"
+                                           required="required"/>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="mobile" class="col-form-label">رقم الهاتف</label>
+                                    <input type="text" class="form-control o_website_form_input" name="mobile" t-att-value="mobile" id="mobile" required="required" placeholder="رقم الهاتف" />
+                                </div>
+                                <div class="form-group field-login col-md-12">
+                                    <label for="login" class="col-form-label">البريد الالكتروني</label>
+                                    <input type="text" class="form-control o_website_form_input" name="login" t-att-value="login" id="login" required="required" placeholder="البريد الالكتروني" />
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="city" class="col-form-label">المدينة</label>
+                                    <input type="text" class="form-control o_website_form_input" name="city" t-att-value="city" id="city" required="required" placeholder="المدينة"/>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="deliver" class="col-form-label">عنوان الشحن</label>
+                                    <input type="text" class="form-control o_website_form_input" name="deliver" t-att-value="deliver" id="deliver" required="required" placeholder="عنوان الشحن"/>
+                                </div>
+                                <div class="form-group field-password col-md-12">
+                                    <label for="password" class="col-form-label">كلمة المرور</label>
+                                    <input type="password" class="form-control o_website_form_input" name="password" id="password" required="required" placeholder="كلمة المرور" />
+                                </div>
+                                <div class="form-group field-confirm_password col-md-12">
+                                    <label for="confirm_password" class="col-form-label">أكيد كلمة المرور</label>
+                                    <input type="password" class="form-control o_website_form_input" name="confirm_password" id="confirm_password" required="required" placeholder="تأكيد كلمة المرور" />
+                                </div>
+
+
+                                <!--                                    <t t-call="auth_signup.fields">-->
+                                <!--                                        <t t-set="only_passwords" t-value="bool(token and not invalid_token)"/>-->
+                                <!--                                    </t>-->
+
+                                <p class="alert alert-danger" t-if="error" role="alert">
+                                    <t t-esc="error"/>
+                                </p>
+                                <input type="hidden" name="redirect" t-att-value="redirect"/>
+                                <input type="hidden" name="token" t-att-value="token"/>
+                                <div class="text-center m-auto oe_login_buttons pt-3 form_register_contain">
+                                    <button type="submit" class="btn form_btn btn-lg register_btn text-center"> انشاء حساب جديد</button>
+                                    <div class="o_login_auth"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

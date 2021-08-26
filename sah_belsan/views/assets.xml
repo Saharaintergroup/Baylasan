@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="asset_frontend" inherit_id="website.assets_frontend" name="Theme Hub Frontend">
+      <xpath expr="." position="inside">
+        <!-- stylesheet -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&amp;display=swap" rel="stylesheet" />
+        <link href="/sah_belsan/static/src/css/owl_carousel_min.css" rel="stylesheet" type="text/css" />
+        <link href="/sah_belsan/static/src/css/owl_theme_default_min.css" rel="stylesheet" type="text/css" />
+        <link href="/sah_belsan/static/src/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/sah_belsan/static/src/css/responsive.css" rel="stylesheet" type="text/css" />
+
+        <script src="/sah_belsan/static/src/js/owl_carousel_min.js"></script>
+        <script src="/sah_belsan/static/src/js/scripts.js"></script>
+      </xpath>
+    </template>
+  </data>
+</odoo>
