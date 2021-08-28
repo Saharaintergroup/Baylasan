@@ -69,6 +69,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//search" position="inside">
                       <filter string="Brand" name="Brand" context="{'group_by':'brand_id'}"/>
+                      <filter string="Product Category" name="Brand" context="{'group_by':'categ_id'}"/>
                 </xpath>
             </field>
         </record>
