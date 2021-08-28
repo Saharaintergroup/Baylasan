@@ -142,14 +142,18 @@
                                         <a target="_blank" t-att-href="website.social_facebook"><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li class="contact_information_social_icons">
-                                        <a target="_blank" t-att-href="website.social_instagram"><i class="fa fa-instagram"></i></a>
+                                        <a target="_blank" t-att-href="website.social_instagram"> <i class="fa fa-instagram"></i></a>
                                     </li>
                                     <li class="contact_information_social_icons">
-                                        <a target="_blank" t-att-href="website.social_youtube"><i class="fa fa-snapchat-ghost"></i></a>
+                                        <a target="_blank" t-att-href="website.social_youtube"><i class="fa fa-youtube"></i></a>
                                     </li>
                                     <li class="contact_information_social_icons">
                                         <a target="_blank" href="https://api.whatsapp.com/send?phone=0925838044"><i class="fa fa-whatsapp"></i></a>
                                     </li>
+                                    <li class="contact_information_social_icons">
+                                        <a target="_blank" t-att-href="website.snapchat"><i class="fa fa-snapchat-ghost"></i></a>
+                                    </li>
+
                                 </ul>
 
                             </div>

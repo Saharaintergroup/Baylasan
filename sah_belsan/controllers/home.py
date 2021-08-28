@@ -23,3 +23,18 @@ class WebsiteSort(Home):
             'categories': categories,
             # 'slider_home': slider_home,
         })
+
+# class AboutUs(http.Controller):
+#     @http.route('/about_us',type='http', auth='public')
+#     def about(self, **kw):
+#
+#         Product = request.env['product.template'].search_count([])
+#         Brands = request.env['product.brand'].search_count([])
+#         Company = request.env['res.company'].search([],limit=1)
+#
+#         return request.render('sah_belsan.belsan_about_us_page', {
+#             'product': Product,
+#             'brands': Brands,
+#             'company': Company,
+#
+#         })

@@ -23,7 +23,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website','website_sale','website_sale_wishlist','website_form'],
+    'depends': ['base','website','website_sale','website_sale_wishlist','website_form','product_brand_inventory'],
 
     # always loaded
     'data': [
@@ -34,7 +34,9 @@
         'views/product.xml',
         'views/products_offer.xml',
         'views/slider_products.xml',
+        'views/rescompany.xml',
         'data/pages.xml',
+
     ],
     # only loaded in demonstration mode
 

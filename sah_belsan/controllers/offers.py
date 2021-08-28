@@ -2,7 +2,7 @@ from odoo.addons.portal.controllers.web import Home
 from odoo import http
 from odoo.http import request
 
-from odoo.odoo.addons.http_routing.models.ir_http import slug
+from odoo.addons.http_routing.models.ir_http import slug
 
 
 class WebsiteSort(Home):

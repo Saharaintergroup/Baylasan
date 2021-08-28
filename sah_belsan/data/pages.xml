@@ -222,19 +222,19 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="about_counter_grid">
-                                                <h3>29,033</h3>
+                                                <h3><span t-esc="request.env['product.template'].search_count([])"/></h3>
                                                 <p>المنتجات</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="about_counter_grid">
-                                                <h3> 29,033</h3>
+                                                <h3><span t-esc="request.env['product.brand'].search_count([])"/></h3>
                                                 <p> الماركات</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="about_counter_grid">
-                                                <h3> 29,033</h3>
+                                                <h3><span t-esc="request.env['res.company'].search([],limit=1).branches_no"/></h3>
                                                 <p> الفروع</p>
                                             </div>
                                         </div>
