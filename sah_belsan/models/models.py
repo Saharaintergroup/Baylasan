@@ -6,7 +6,7 @@ class InheritProduct(models.Model):
     _inherit = 'product.template'
 
     discount = fields.Float("Discount (%)")
-    # old_products = fields.Char()
+    old_products = fields.Char()
 
     @api.onchange('discount')
     def _value_sale_price(self):

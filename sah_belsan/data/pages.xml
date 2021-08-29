@@ -29,7 +29,7 @@
                                                         <div class="carousel_heder_title">
                                                             <h1>أحدث المنتجات الخاصة بالعطور</h1>
                                                             <h5>من أرقى الماركات العالمية</h5>
-                                                                <a href="/shop/category/twr-1" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
+                                                            <a href="/shop/category/twr-1" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
                                                             </a>
                                                         </div>
                                                     </div>
@@ -92,6 +92,18 @@
                             </section>
 
                             <t t-call="sah_belsan.product_new" />
+
+                            <section class="home_about_us_section">
+                                <div class="container">
+                                    <div class="home_about_us_content">
+                                        <h5>هناك حقيقة مثبتة منذ زمن طويل وهي أن </h5>
+                                        <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
+                                        <br/>
+                                        <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح</p>
+                                        <a href="/about_us">قراءة المزيد </a>
+                                    </div>
+                                </div>
+                            </section>
                             <section class="sale_section">
                                 <div class="container">
                                     <div class="sale_container">
@@ -103,6 +115,62 @@
                                         </div>
                                     </div>
 
+                                </div>
+                            </section>
+                            <section class="oe_structure home_contact_pages mt-5">
+                                <div class="container sec-contain">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="title_head_contain mb-5">
+                                                <div class="home_title wow bounceInLeft">
+                                                    <h2 class="home_contact_sec_title contact_page_title">تواصل معنا</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <form id="contactus_form" style="padding: 0;border: none;" action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
+                                                <div class="form-group form-field o_website_form_required_custom">
+                                                    <label for="contact_name">الإسم ثلاثي</label>
+                                                    <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="الإسم ثلاثي*" name="contact_name" required=""/>
+                                                </div>
+                                                <div class="form-group row form-field o_website_form_required_custom">
+                                                    <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder="البريد الإلكتروني*" required="" t-att-value="request.params.get('email_from', '')"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row form-field o_website_form_required_custom">
+                                                    <label class="col-md-12 col-form-label" for="name">موضوع</label>
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row form-field o_website_form_required_custom">
+                                                    <label class="col-md-12 col-form-label" for="description">رسالتك</label>
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control o_website_form_input custom_contact_us_form" placeholder="قم بترك رسالتك هنا*" rows="9" name="description" required="">
+                                                            <t t-esc="request.params.get('description', '')"/>
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-md-12">
+                                                        <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send contact_form_btn home_contact_btn" style="display: block;">إرسال</a>
+                                                        <span id="o_website_form_result"/>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-lg-6 mt-4">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13404.2031576572!2d13.185717433621322!3d32.87037559510071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a892df80971065%3A0x9fc92b2d76d6e9a4!2sBab%20Ben%20Ghashir%2C%20Tripoli%2C%20Libya!5e0!3m2!1sen!2seg!4v1617735231564!5m2!1sen!2seg" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
 
@@ -213,8 +281,8 @@
                                                         <h5 class="about_baylsan_title mb-3">هناك حقيقة مثبتة منذ زمن طويل</h5>
                                                         <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>
                                                     </div>
-<!--                                                    <p class="about_us_des"> وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</p>-->
-<!--                                                    <p class="about_us_des">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم.</p>-->
+                                                    <!--                                                    <p class="about_us_des"> وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</p>-->
+                                                    <!--                                                    <p class="about_us_des">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم.</p>-->
                                                 </div>
                                             </div>
                                         </div>
@@ -223,7 +291,7 @@
                                         <div class="col-lg-4">
                                             <div class="about_counter_grid">
                                                 <h3><span t-esc="request.env['product.template'].search_count([])"/></h3>
-                                                <p>المنتجات</p>
+                                                <p>منتجاتنا</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -235,7 +303,7 @@
                                         <div class="col-lg-4">
                                             <div class="about_counter_grid">
                                                 <h3><span t-esc="request.env['res.company'].search([],limit=1).branches_no"/></h3>
-                                                <p> الفروع</p>
+                                                <p> فروعنا</p>
                                             </div>
                                         </div>
                                     </div>
@@ -261,15 +329,15 @@
                     <t t-call="website.layout">
                         <div id='wrap' class='oe_structure'>
                             <!-- contact -->
-                            <section class="oe_structure panner_pages">
+                            <section class="oe_structure contact_panner_pages">
                                 <div class="container sec-contain">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="title_head_contain">
                                                 <div class="home_title wow bounceInLeft">
                                                     <h2 class="home_why_choose_title contact_page_title">تواصل معنا</h2>
-                                                    <p class="mb-5">تواصل معنا للاستفسار عن اي معلومات او خدمات
-                                                    </p>
+                                                    <!--                                                    <p class="mb-5">تواصل معنا للاستفسار عن اي معلومات او خدمات-->
+                                                    <!--                                                    </p>-->
                                                 </div>
                                             </div>
                                         </div>
@@ -278,45 +346,63 @@
                             </section>
                             <section class="contact_form_sec">
                                 <div class="container">
+                                    <!--                                    <div class="row">-->
+                                    <!--                                        <div class="col-lg-6">-->
+                                    <form id="contactus_form" action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
+                                        <div class="form-group form-field o_website_form_required_custom">
+                                            <label for="contact_name">الإسم ثلاثي</label>
+                                            <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="الإسم ثلاثي*" name="contact_name" required=""/>
+                                        </div>
+                                        <div class="form-group row form-field o_website_form_required_custom">
+                                            <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder="البريد الإلكتروني*" required="" t-att-value="request.params.get('email_from', '')"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row form-field o_website_form_required_custom">
+                                            <label class="col-md-12 col-form-label" for="name">موضوع</label>
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row form-field o_website_form_required_custom">
+                                            <label class="col-md-12 col-form-label" for="description">رسالتك</label>
+                                            <div class="col-md-12">
+                                                <textarea class="form-control o_website_form_input custom_contact_us_form" placeholder="قم بترك رسالتك هنا*" rows="9" name="description" required=""><t t-esc="request.params.get('description', '')"/></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row text-center">
+                                            <div class="col-md-12 text_center">
+                                                <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send contact_form_btn home_contact_btn">إرسال</a>
+                                                <span id="o_website_form_result"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                </div>
+                            </section>
+                            <section class="contact_sec_info mt-5">
+                                <div class="container">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <form id="contactus_form" action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
-                                                <div class="form-group form-field o_website_form_required_custom">
-                                                    <label for="contact_name">الأسم ثلاثي</label>
-                                                    <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="الأسم ثلاثي*" name="contact_name" required=""/>
-                                                </div>
-                                                <div class="form-group row form-field o_website_form_required_custom">
-                                                    <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder="البريد الإلكتروني*" required="" t-att-value="request.params.get('email_from', '')"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row form-field o_website_form_required_custom">
-                                                    <label class="col-md-12 col-form-label" for="name">موضوع</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row form-field o_website_form_required_custom">
-                                                    <label class="col-md-12 col-form-label" for="description">رسالتك</label>
-                                                    <div class="col-md-12">
-                                                        <textarea class="form-control o_website_form_input custom_contact_us_form" placeholder="قم بترك رسالتك هنا*" rows="9" name="description" required=""><t t-esc="request.params.get('description', '')"/></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <div class="col-md-12">
-                                                        <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send contact_form_btn home_contact_btn">ارسال</a>
-                                                        <span id="o_website_form_result"/>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                            <div class="contact_map_info">
+                                                <h5>
+                                                    يمكنك زيارتنا في المقر الرئيسي
+                                                </h5>
+                                                <p>عن طريق خرائط جوجل</p>
+                                                <img src="/sah_belsan/static/src/img/contact_mab.png" class="img-fluid" />
+                                                <a href="https://www.google.com/maps?ll=32.870376,13.194472&amp;z=15&amp;t=m&amp;hl=en&amp;gl=EG&amp;mapclient=embed&amp;q=Bab+Ben+Ghashir+Tripoli+Libya" target="blank" > الذهاب إلي العنوان</a>
+                                            </div>
+                                            <!--                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13404.2031576572!2d13.185717433621322!3d32.87037559510071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a892df80971065%3A0x9fc92b2d76d6e9a4!2sBab%20Ben%20Ghashir%2C%20Tripoli%2C%20Libya!5e0!3m2!1sen!2seg!4v1617735231564!5m2!1sen!2seg" width="500" height="620" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
                                         </div>
                                         <div class="col-lg-6">
                                             <ul class="contact_information_list" data-oe-model="ir.ui.view" data-oe-id="1860" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/section[2]/div[1]/div[1]/div[1]/div[2]/ul[1]">
                                                 <li class="contact_information_item">
                                                     <a target="blank" class="contact_information_item_label contact_information_phone_item_label">
                                                         <i class="fa fa-phone"></i>
-                                                        293 9023 9384 7347</a>
+                                                        0925838044 218+
+                                                    </a>
                                                 </li>
                                                 <li class="contact_information_item">
                                                     <a class="contact_information_item_label">
@@ -326,14 +412,15 @@
                                                 <li class="contact_information_item">
                                                     <a target="blank" class="contact_information_item_label">
                                                         <i class="fa fa-map-marker"></i>
-                                                        طرابلس - ليبيا</a>
+                                                        منطقة جامع الصقع</a>
                                                 </li>
                                             </ul>
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13404.2031576572!2d13.185717433621322!3d32.87037559510071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a892df80971065%3A0x9fc92b2d76d6e9a4!2sBab%20Ben%20Ghashir%2C%20Tripoli%2C%20Libya!5e0!3m2!1sen!2seg!4v1617735231564!5m2!1sen!2seg" width="500" height="620" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                         </div>
+
                                     </div>
                                 </div>
                             </section>
+
                         </div>
                     </t>
                 </t>

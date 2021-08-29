@@ -481,7 +481,7 @@ p.footer_page_address {
     right: 20%;
     top: 30px;
 }
-#top_menu_login:after{
+#top_menu_login li:last-child:after{
     position: absolute;
     content: " ";
     bottom: 10px;
@@ -525,6 +525,13 @@ p.footer_page_address {
     max-height: unset;
     margin-top: 0;
     margin-bottom: 0;
+}
+#products_grid .oe_product .oe_product_cart{
+    position: relative;
+    width: 90%;
+    height: 95%;
+    border: 1px solid #eee;
+    border-radius: 5px;
 }
 #products_grid.col-lg-12 .oe-height-2 {
     height: 400px;
@@ -649,15 +656,15 @@ p.footer_page_address {
 }
 .product_discount
 {
-    display: block;
-    z-index: 99;
-    position: absolute;
-    top: 20%;
-    left: -25%;
-    color: #fff !important;
-    background: #ee64c4;
-    padding: .4rem 1rem;
-    border-radius: 15px;
+   display: block;
+   z-index: 99;
+   position: absolute;
+   top: 8%;
+   left: -17%;
+   color: #fff;
+   background: #ee64c4;
+   padding: .4rem 1rem;
+   border-radius: 15px;
 }
 #product_details h1{
     text-align: left;
@@ -838,7 +845,14 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
 .o_rtl .homepage_product_categories_item{
     direction: ltr !important;
 }
-.contact_form_btn, .o_portal_details .btn-primary.float-right{
+.contact_form_btn{
+    background: #dc5393 !important;
+    color: #fff;
+    border-radius: 9px;
+    padding: .4rem 5rem;
+    border-color: #dc5393 !important;
+}
+.o_portal_details .btn-primary.float-right{
     background: #dc5393 !important;
     color: #fff;
     border-radius: 9px;
@@ -846,6 +860,13 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
     float: left !important;
     border-color: #dc5393 !important;
     width: 100%;
+}
+.contact_panner_pages{
+    background-image: url("../img/contact_bg.png");
+    background-size: cover;
+    padding: 11rem 11rem 13rem;
+    text-align: center;
+    background-repeat: no-repeat;
 }
 .o_portal_wrap h3{
     margin-top: 1rem;
@@ -855,7 +876,7 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
     color: #dc5393;
 }
 h2.home_why_choose_title.contact_page_title {
-    color: #ff22bb;
+    color: #fff;
     font-weight: 600;
     position: relative;
     padding-bottom: 15px;
@@ -864,16 +885,20 @@ h2.home_why_choose_title.contact_page_title {
     position: absolute;
     content: "";
     bottom: 0;
-    left: 0;
+    left: 46%;
     width: 70px;
     height: 3px;
-    background: #ee61b9;
+    background: #fff;
+}
+section.contact_form_sec {
+    margin-top: -7rem;
 }
 form#contactus_form {
     padding: 3rem;
     border: 1px solid #d5d5d5;
     border-radius: 10px;
     margin-top: 0 !important;
+    background: #fff;
 }
 #contactus_form .custom_contact_us_form {
     background: #f5f5f5;
@@ -886,23 +911,61 @@ form#contactus_form {
     font-size: 12px;
 }
 ul.contact_information_list {
-    opacity: .9;
+    background-image: url("../img/contact_info_bg.png");
+    background-size: cover;
+    padding: 6rem;
+    text-align: center;
     list-style: none;
-    width: 55%;
-    padding: 1rem;
-    position: absolute;
-    top: 35px;
-    right: 22%;
-    border-radius: 20px;
-    background-color: #004;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
+.contact_map_info{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+}
+.contact_map_info img{
+    width: 31%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.contact_map_info h5{
+    color: #000044;
+    font-size: 21px;
+    font-weight: 600;
+    padding-bottom: 17px;
+}
+.contact_map_info p{
+    color: #ff22bb;
+    font-weight: 600;
+    font-size: 17px;
+}
+.contact_map_info a{
+    font-size: 14px;
+    font-weight: 600;
+    background: #ff22bb;
+    color: #fff;
+    margin: auto;
+    padding: .5rem;
+    border-radius: 9px;
+    display: block;
+    text-decoration: none !important;
 }
 li.contact_information_item {
     color: #fff;
+    opacity: .7;
+    font-size: 15px;
     padding: 1rem;
+    font-weight: 600;
 }
 .contact_information_item_label i{
-    padding-right: 1rem;
-}
+    position: absolute;
+    left: 8rem;
+    font-size: 20px;
+    opacity: .7;
+ }
 .custom_contact_us_form.form-control:focus
 {
     box-shadow: none;
@@ -1014,3 +1077,30 @@ li.contact_information_item {
 .owl-product-home .product_item .Shop_details_disc{
     display: none;
 }
+.home_about_us_section{
+    background-image: url("../img/home_sec_about.png");
+    background-size: cover;
+    padding: 4rem;
+    background-repeat: no-repeat;
+    color: #fff !important;
+    margin-bottom: 3rem;
+}
+.home_contact_sec_title,.home_contact_sec_title:after{
+    color: #dc5393;
+}
+.home_about_us_content{
+    width: 35%;
+}
+.home_about_us_content h5{
+    font-size: 20px;
+    margin-bottom: 23px;
+    font-weight: 600;
+}
+.home_about_us_content a{
+    color: #c84f97;
+    background: #fff;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    margin-top: 20px;
+    display: inline-block;
+ }

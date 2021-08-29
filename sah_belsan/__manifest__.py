@@ -23,7 +23,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website','website_sale','website_sale_wishlist','website_form','product_brand_inventory'],
+    'depends': ['base','website','website_sale','website_sale_wishlist','website_form','product_brand'],
 
     # always loaded
     'data': [
