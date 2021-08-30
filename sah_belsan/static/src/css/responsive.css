@@ -219,6 +219,9 @@
     #top_menu_login:after{
         display: none;
     }
+    #products_grid .oe_product.oe_grid .oe_subdescription {
+        height: 35px;
+    }
 }
 @media (max-width: 767px){
     .header_carousel_icon_next, .header_carousel_icon_prev {
@@ -249,10 +252,13 @@
     .dropdown.ml-2.dropdown_sorty_by .btn-secondary {
         padding: .5rem 6rem .5rem 6rem;
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 0rem;
     }
      .dropdown_sorty_by.show .dropdown-menu.show{
         left: 15% !important;
+    }
+    #products_grid.col-lg-9 .oe-height-2 {
+        height: 450px;
     }
 }
 @media (max-width: 600px){

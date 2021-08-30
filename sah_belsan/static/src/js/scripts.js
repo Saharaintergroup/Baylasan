@@ -66,6 +66,25 @@ $(function() {
             }
         },
     });
+    $('.product_brand_slider').owlCarousel({
+        items: 5,
+        margin: 1,
+        nav: true,
+        rtl:true,
+        loop:true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 3
+            },
+            992: {
+                items: 5
+            }
+        },
+    });
 })
 
 

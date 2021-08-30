@@ -76,16 +76,33 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="/sah_belsan/static/src/img/new_product.png" class="d-block w-100" alt="..." />
+                                            <img src="/sah_belsan/static/src/img/home_offer.png" class="d-block w-100" alt="..." />
                                             <div class="new_product_container">
-                                                <h3>أحدث المنتجات التجميلية</h3>
-                                                <h5>من أرقى الماركات العالمية</h5>
-                                                <a href="/shop" type="button" class="btn btn_header btn-slider">اطلعي عليها الأن
-                                                </a>
+                                                <h3>أفضل العروض والخصومات</h3>
+                                            </div>
+                                            <div class="home_offer_percent">
+                                                <h4>خصومات تصل إلي 70% </h4>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <img src="/sah_belsan/static/src/img/left_img.png" class="d-block w-100" alt="..." />
+                                        <div class="col-md-6 mt-2">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="home_offer_product_container">
+                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />
+                                                        <div class="home_offer_product_percent">
+                                                            <a href="#">خصومات تصل إلي 15% </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="home_offer_product_container">
+                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />
+                                                        <div class="home_offer_product_percent">
+                                                            <a href="#">خصومات تصل إلي 20% </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -104,17 +121,39 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="sale_section">
-                                <div class="container">
-                                    <div class="sale_container">
-                                        <img src="/sah_belsan/static/src/img/sale_banner.png" class="d-block w-100" alt="..." />
-                                        <div class="sale_content">
-                                            <p class="btn btn_sale">خصومات خاصة</p>
-                                            <h1>تمتعي بخصومات خاصة</h1>
-                                            <h5>عند شرائك بأكثر من 500 دينار من قسم العناية بالبشرة</h5>
+                            <!--                            <section class="sale_section">-->
+                            <!--                                <div class="container">-->
+                            <!--                                    <div class="sale_container">-->
+                            <!--                                        <img src="/sah_belsan/static/src/img/sale_banner.png" class="d-block w-100" alt="..." />-->
+                            <!--                                        <div class="sale_content">-->
+                            <!--                                            <p class="btn btn_sale">خصومات خاصة</p>-->
+                            <!--                                            <h1>تمتعي بخصومات خاصة</h1>-->
+                            <!--                                            <h5>عند شرائك بأكثر من 500 دينار من قسم العناية بالبشرة</h5>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+
+                            <!--                                </div>-->
+                            <!--                            </section>-->
+                            <section class="oe_structure home_contact_pages mt-5">
+                                <div class="container sec-contain">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="title_head_contain mb-5">
+                                                <div class="home_title wow bounceInLeft">
+                                                    <h2 class="latest_product_title">الموزعين المعتمدين</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-carousel owl-theme product_brand_slider">
+                                            <t t-foreach="brands" t-as="brand">
+                                                <div class="center">
+                                                    <div class="home_client_img_container">
+                                                        <img t-att-src="'data:image/png;base64,%s' % to_text(brand.logo)" class="d-block img-fluid" alt="..."/>
+                                                    </div>
+                                                </div>
+                                            </t>
                                         </div>
                                     </div>
-
                                 </div>
                             </section>
                             <section class="oe_structure home_contact_pages mt-5">
@@ -123,7 +162,7 @@
                                         <div class="col-md-12">
                                             <div class="title_head_contain mb-5">
                                                 <div class="home_title wow bounceInLeft">
-                                                    <h2 class="home_contact_sec_title contact_page_title">تواصل معنا</h2>
+                                                    <h2 class="latest_product_title">تواصل معنا</h2>
                                                 </div>
                                             </div>
                                         </div>

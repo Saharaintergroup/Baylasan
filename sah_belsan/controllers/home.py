@@ -10,7 +10,7 @@ class WebsiteSort(Home):
 
         Product = request.env['product.template'].with_context(bin_size=True)
         Category = request.env['product.public.category']
-
+        brands = request.env['product.brand'].search([])
         new_products = Product.search([('is_published', '=', True)], order="create_date DESC", limit=8)
         # offers_products = Product.search([('is_published', '=', True), ('is_offers', '=', True)])
         # popular_products = Product.search([('is_published', '=', True), ('is_popular', '=', True)])
@@ -21,6 +21,7 @@ class WebsiteSort(Home):
             # 'offers_products': offers_products,
             # 'popular_products': popular_products,
             'categories': categories,
+            'brands': brands,
             # 'slider_home': slider_home,
         })
 

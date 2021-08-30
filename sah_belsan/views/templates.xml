@@ -258,31 +258,31 @@
             </xpath>
         </template>
 
-        <template id="inherit_website_shop_price" inherit_id="website_sale.product_price">
-            <xpath expr="//div[hasclass('product_price')]" position="inside">
-                <p itemprop="category" t-field="product.categ_id.name" class="product_category shop_product_category shop_details_category" style=" "></p>
-                <t t-if="product.discount">
-                    <span class="product_discount Shop_details_disc">خصم <span itemprop="discount" t-field="product.discount"
-                                                                               class="Shop_details_disc"></span> %</span>
-                </t>
-                <div class="o_not_editable">
-                    <p t-field="product.description_sale" class="text-right mt-5" />
-                </div>
-            </xpath>
+<!--        <template id="inherit_website_shop_price" inherit_id="website_sale.product_price">-->
+<!--            <xpath expr="//div[hasclass('product_price')]" position="inside">-->
+<!--                <p itemprop="category" t-field="product.categ_id.name" class="product_category shop_product_category shop_details_category" style=" "></p>-->
+<!--                <t t-if="product.discount">-->
+<!--                    <span class="product_discount Shop_details_disc">خصم <span itemprop="discount" t-field="product.discount"-->
+<!--                                                                               class="Shop_details_disc"></span> %</span>-->
+<!--                </t>-->
+<!--                <div class="o_not_editable">-->
+<!--                    <p t-field="product.description_sale" class="text-right mt-5" />-->
+<!--                </div>-->
+<!--            </xpath>-->
 
-        </template>
+<!--        </template>-->
         <template id="inherit_website_shop_disc" inherit_id="website_sale.product">
             <xpath expr="//div[@id='product_details']/div[hasclass('o_not_editable')]" position="replace"/>
         </template>
 
-        <template id="inherit_website_shop_discount" inherit_id="website_sale.products_item">
-            <xpath expr="//div[hasclass('oe_product_image')]" position="inside">
-                <t t-if="product.discount">
-                    <span class="product_discount">خصم <span itemprop="discount" t-field="product.discount"
-                                                             class=""></span> %</span>
-                </t>
-            </xpath>
-        </template>
+<!--        <template id="inherit_website_shop_discount" inherit_id="website_sale.products_item">-->
+<!--            <xpath expr="//div[hasclass('oe_product_image')]" position="inside">-->
+<!--                <t t-if="product.discount">-->
+<!--                    <span class="product_discount">خصم <span itemprop="discount" t-field="product.discount"-->
+<!--                                                             class=""></span> %</span>-->
+<!--                </t>-->
+<!--            </xpath>-->
+<!--        </template>-->
 
 
         <template id="web.login" name="Login">
