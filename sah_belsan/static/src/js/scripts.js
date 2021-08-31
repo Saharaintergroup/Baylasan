@@ -18,6 +18,10 @@ $(function() {
     $('body').on('click', '.o_header_affix .langs_dropdown', function(e) {
         e.stopPropagation();
     });
+   /* Initiate the wowjs animation library*/
+   if($(".wow").length){
+       new WOW().init();
+   }
 })
 $(function() {
     'use strict';

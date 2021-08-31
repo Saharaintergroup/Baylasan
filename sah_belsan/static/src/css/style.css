@@ -548,6 +548,9 @@ p.footer_page_address {
     border: 1px solid #eee;
     border-radius: 5px;
 }
+#products_grid .oe_product:hover .oe_product_cart{
+    box-shadow: 0px 0px 9px 0px #00000036 !important;
+}
 #products_grid.col-lg-12 .oe-height-2 {
     height: 400px;
 }
@@ -818,8 +821,8 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
 }
 #product_details .product_price b.oe_price {
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 0;
+    top: 70px;
     color: #ff22bb;
 }
 .row.o_website_rating_card_container {
@@ -1207,4 +1210,18 @@ li.contact_information_item {
     color: #ee61b9 !important;
     font-weight: 600;
     text-decoration: none !important;
+}
+.owl-product-home .product_item{
+    margin: 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.product_item:hover{
+    box-shadow: 0px 0px 9px 0px #00000036 !important;
+}
+.about_us_page_title{
+    color: #ee61b9;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
 }

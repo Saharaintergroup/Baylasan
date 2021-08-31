@@ -125,7 +125,7 @@
                                         <a target="_blank" t-att-href="website.social_instagram"> <i class="fa fa-instagram"></i></a>
                                     </li>
                                     <li class="contact_information_social_icons">
-                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=0925838044"><i class="fa fa-whatsapp"></i></a>
+                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=+218 925838044"><i class="fa fa-whatsapp"></i></a>
                                     </li>
                                     <li class="contact_information_social_icons">
                                         <a target="_blank" t-att-href="website.snapchat"><i class="fa fa-snapchat-ghost"></i></a>
@@ -191,17 +191,17 @@
                                     <li class="footer_page_list footer_address">
                                         <i class="fa fa-map-marker"></i>
                                         <P class="footer_page_address">منطقة جامع الصقع</P>
-                                        <P class="footer_page_address_phone">218925838044+</P>
+                                        <P class="footer_page_address_phone">925838044 218+</P>
                                     </li>
                                     <li class="footer_page_list footer_address">
                                         <i class="fa fa-map-marker"></i>
-                                        <P class="footer_page_address"> شارع الجرابه أمام مصحة اليبيى السوسرى</P>
-                                        <P class="footer_page_address_phone">2180915668888+</P>
+                                        <P class="footer_page_address"> شارع الجرابة أمام مصحة اليبيى السوسرى</P>
+                                        <P class="footer_page_address_phone">0915668888 218+</P>
                                     </li>
                                     <li class="footer_page_list footer_address">
                                         <i class="fa fa-map-marker"></i>
-                                        <P class="footer_page_address">شارع الجرابه أمام مطعم الشويا</P>
-                                        <P class="footer_page_address_phone">2180919778888+</P>
+                                        <P class="footer_page_address">شارع الجرابة أمام مطعم الشويا</P>
+                                        <P class="footer_page_address_phone">0919778888 218+</P>
                                     </li>
                                 </ul>
 
