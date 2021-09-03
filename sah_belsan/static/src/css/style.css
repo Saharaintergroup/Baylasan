@@ -1185,20 +1185,19 @@ li.contact_information_item {
 .product_price p.text-right{
     text-align: left !important;
 }
-.home_offer_product_container{
-    background: #fff;
-    box-shadow: 0px 0px 16px #0000002b;
-    padding: 1rem;
-    border-radius: 17px;
+.home_offer_promotion{
+    position: relative;
+    margin-bottom: 20px;
 }
-.home_offer_product_container img{
-    border-radius: 50%;
-    padding: 1rem 3rem 2rem;
+.home_offer_promotion .home_offer_product_percent{
+    position: absolute;
+    top: 40%;
+    background-color: #f8d1f1;
+    left: 33%;
 }
 .home_offer_product_percent
 {
     border-radius: 16px;
-    background-color: #ff22bb21;
     color: #ee61b9;
     padding: .8rem .5rem;
     margin-bottom: 1rem;
@@ -1209,6 +1208,7 @@ li.contact_information_item {
     text-align: center;
     color: #ee61b9 !important;
     font-weight: 600;
+    padding: 20px;
     text-decoration: none !important;
 }
 .owl-product-home .product_item{

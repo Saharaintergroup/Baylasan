@@ -86,22 +86,37 @@
                                         </div>
                                         <div class="col-md-6 mt-2">
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="home_offer_product_container">
-                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />
-                                                        <div class="home_offer_product_percent">
-                                                            <a href="#">خصومات تصل إلي 15% </a>
-                                                        </div>
+                                                <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
+                                                    <img src="/sah_belsan/static/src/img/offer_product1.png" class="d-block w-100" alt="..."/>
+                                                    <div class="home_offer_product_percent">
+                                                        <a href="#">خصومات تصل إلي 15% </a>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="home_offer_product_container">
-                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />
-                                                        <div class="home_offer_product_percent">
-                                                            <a href="#">خصومات تصل إلي 20% </a>
-                                                        </div>
+
+<!--                                                <div class="col-md-12">-->
+<!--                                                    <div class="home_offer_product_container">-->
+<!--                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />-->
+<!--                                                        <div class="home_offer_product_percent">-->
+<!--                                                            <a href="#">خصومات تصل إلي 15% </a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
+                                                    <img src="/sah_belsan/static/src/img/offer_product2.png" class="d-block w-100" alt="..."/>
+                                                    <div class="home_offer_product_percent">
+                                                        <a href="#">خصومات تصل إلي 20% </a>
                                                     </div>
                                                 </div>
+                                                <!--                                                <div class="col-md-12">-->
+                                                <!--                                                    <div class="home_offer_product_container">-->
+                                                <!--                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />-->
+                                                <!--                                                        <div class="home_offer_product_percent">-->
+                                                <!--                                                            <a href="#">خصومات تصل إلي 20% </a>-->
+                                                <!--                                                        </div>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
                                             </div>
                                         </div>
                                     </div>
