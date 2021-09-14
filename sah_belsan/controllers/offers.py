@@ -18,7 +18,7 @@ class WebsiteSort(Home):
             current_products = offers_products
             while current_products.product_id:
                 offers_products.append(current_products.product_id)
-        print(offers_products)
+
         return request.render('sah_belsan.product_offers_page', {
             'offers_products': offers_products,
         })

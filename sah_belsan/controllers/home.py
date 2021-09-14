@@ -7,7 +7,6 @@ class WebsiteSort(Home):
     @http.route('/')
     def index(self, **kw):
         super(WebsiteSort, self).index()
-
         Product = request.env['product.template'].with_context(bin_size=True)
         Category = request.env['product.public.category']
         brands = request.env['product.brand'].search([])
@@ -22,8 +21,20 @@ class WebsiteSort(Home):
             # 'popular_products': popular_products,
             'categories': categories,
             'brands': brands,
+            'offers': self._get_pricelist_offers()
             # 'slider_home': slider_home,
         })
+
+
+    def _get_pricelist_offers(self):
+        offers = []
+        offers_ids = request.website.pricelist_id.item_ids.filtered(lambda i: i.compute_price == 'percentage' and i.percent_price > 0.0)
+        for offer in offers_ids:
+            offers.append({
+                'offer_id': offer.id,
+                'offer_percentage': offer.percent_price,
+            })
+        return offers
 
 # class AboutUs(http.Controller):
 #     @http.route('/about_us',type='http', auth='public')

@@ -12,10 +12,12 @@ from odoo.http import request
 class WebsiteSale(WebsiteSale):
 
     @http.route([
-        '''/shop/discount'''
+        '''/shop/offer/<int:offer_id>'''
     ], type='http', auth="public", website=True)
-    def shop_discount(self, page=0, category=None, search='', ppg=False, **post):
-
+    def shop_discount(self, page=0, category=None, offer_id=False, search='', ppg=False, **post):
+        print("/*",offer_id)
+        if not offer_id:
+            return request.redirect('/')
         add_qty = int(post.get('add_qty', 1))
         if category:
             category = request.env['product.public.category'].search([('id', '=', int(category))], limit=1)
@@ -57,7 +59,10 @@ class WebsiteSale(WebsiteSale):
         search_categories = False
         search_product = Product.search(domain, order=self._get_search_order(post))
 
-        search_product = search_product.filtered(lambda p: p.discount > 0.0)
+        # search_product = search_product.filtered(lambda p: p.discount > 0.0)
+        print(self._get_offer_products(offer_id).ids)
+        search_product = search_product.filtered(lambda p: p.id in self._get_offer_products(offer_id).ids)
+
         if search:
             categories = search_product.mapped('public_categ_ids')
             search_categories = Category.search(
@@ -113,3 +118,22 @@ class WebsiteSale(WebsiteSale):
         if category:
             values['main_object'] = category
         return request.render("website_sale.products", values)
+
+    def _get_offer_products(self, offer_id):
+        Offer = request.env['product.pricelist.item'].sudo().browse(offer_id)
+        if not Offer:
+            return request.env['product.template']
+
+        if Offer.applied_on == '3_global':
+            return request.env['product.template'].sudo().search([])
+
+        elif Offer.applied_on == '2_product_category':
+            return request.env['product.template'].sudo().search([('categ_id', 'child_of', Offer.categ_id.id)])
+
+        # elif Offer.applied_on == '1_product':
+        #     return Offer.product_tmpl_id
+        #
+        # elif Offer.applied_on == '0_product_variant':
+        #     return Offer.product_id.product_tmpl_id
+        else:
+            return request.env['product.template']

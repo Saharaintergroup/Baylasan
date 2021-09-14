@@ -89,38 +89,20 @@
                                                 <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
                                                     <img src="/sah_belsan/static/src/img/offer_product1.png" class="d-block w-100" alt="..."/>
                                                     <div class="home_offer_product_percent">
-                                                        <a href="#">خصومات تصل إلي 15% </a>
+                                                        <a t-attf-href="/shop/offer/{{offers[0]['offer_id']}}">خصومات تصل إلي <span t-esc="offers[0]['offer_percentage']"/>%  </a>
                                                     </div>
                                                 </div>
-
-<!--                                                <div class="col-md-12">-->
-<!--                                                    <div class="home_offer_product_container">-->
-<!--                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />-->
-<!--                                                        <div class="home_offer_product_percent">-->
-<!--                                                            <a href="#">خصومات تصل إلي 15% </a>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
                                                     <img src="/sah_belsan/static/src/img/offer_product2.png" class="d-block w-100" alt="..."/>
                                                     <div class="home_offer_product_percent">
-                                                        <a href="#">خصومات تصل إلي 20% </a>
+                                                        <a t-attf-href="/shop/offer/{{offers[1]['offer_id']}}">خصومات تصل إلي<span t-esc="offers[1]['offer_percentage']"/>% </a>
                                                     </div>
                                                 </div>
-                                                <!--                                                <div class="col-md-12">-->
-                                                <!--                                                    <div class="home_offer_product_container">-->
-                                                <!--                                                        <img src="/sah_belsan/static/src/img/offer_product.png" class="d-block w-100" alt="..." />-->
-                                                <!--                                                        <div class="home_offer_product_percent">-->
-                                                <!--                                                            <a href="#">خصومات تصل إلي 20% </a>-->
-                                                <!--                                                        </div>-->
-                                                <!--                                                    </div>-->
-                                                <!--                                                </div>-->
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div></div>
                             </section>
 
                             <t t-call="sah_belsan.product_new" />
@@ -163,6 +145,7 @@
                                             <t t-foreach="brands" t-as="brand">
                                                 <div class="center">
                                                     <div class="home_client_img_container">
+<!--                                                        <img t-att-src="'/web/image/product.brand/%s/image_1920' % brand.logo" class="d-block img-fluid" alt="..."/>-->
                                                         <img t-att-src="'data:image/png;base64,%s' % to_text(brand.logo)" class="d-block img-fluid" alt="..."/>
                                                     </div>
                                                 </div>
