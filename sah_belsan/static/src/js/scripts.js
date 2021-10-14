@@ -26,7 +26,8 @@ $(function() {
 $(function() {
     'use strict';
     $('.owl-quick-access').owlCarousel({
-        loop: false,
+        loop: true,
+        autoplay : true,
         nav: false,
         margin: 5,
         rtl:true,
