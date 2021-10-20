@@ -15,6 +15,7 @@ class ProductBrand(models.Model):
 
     name = fields.Char('Brand Name', required=True)
     description = fields.Text(translate=True)
+    is_published_brand = fields.Boolean(string='Is Published')
     partner_id = fields.Many2one(
         'res.partner',
         string='Partner',
