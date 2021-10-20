@@ -142,11 +142,13 @@
                                             </div>
                                         </div>
                                         <div class="owl-carousel owl-theme product_brand_slider">
-                                            <t t-foreach="brands" t-as="brand">
+                                            <t t-foreach="total_brand" t-as="brand">
                                                 <div class="center">
                                                     <div class="home_client_img_container">
 <!--                                                        <img t-att-src="'/web/image/product.brand/%s/image_1920' % brand.logo" class="d-block img-fluid" alt="..."/>-->
-                                                        <img t-att-src="'data:image/png;base64,%s' % to_text(brand.logo)" class="d-block img-fluid" alt="..."/>
+<!--                                                        <img t-att-src="'data:image/png;base64,%s' % (brand.id)" class="d-block img-fluid" alt="..."/>-->
+                                                    <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"
+                                                             class="d-block img-fluid" alt="..."/>
                                                     </div>
                                                 </div>
                                             </t>

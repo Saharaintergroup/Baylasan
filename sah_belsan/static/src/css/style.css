@@ -857,7 +857,8 @@ p.product_price,.oe_optional_products_modal .table-striped .td-price,b.product_p
 .o_rtl .owl-carousel .owl-stage-outer{
     direction: ltr !important;
 }
-.o_rtl .owl-carousel.owl-theme.homepage_product_categories_nav.owl-loaded.owl-drag{
+.o_rtl .owl-carousel.owl-theme.homepage_product_categories_nav.owl-loaded.owl-drag,
+.o_rtl .owl-carousel.owl-theme.product_brand_slider.owl-loaded.owl-drag{
     direction: rtl !important;
 }
 .o_rtl .homepage_product_categories_item{
