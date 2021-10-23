@@ -31,13 +31,6 @@ header, .o_header_affix
 .o_header_affix .headr_contact_bg{
     display:none;
 }
-.o_header_affix.affixed #belsan_header_search_input{
-    position: fixed;
-    left: 200px;
-    width: 170px;
-    z-index: 99999;
-    top: 119px;
-}
 .total_pages
 {
     position: absolute;
@@ -72,11 +65,11 @@ header, .o_header_affix
 }
 #belsan_header_search_input{
     display: none;
-    position: absolute;
-    right: 105px;
+    position: fixed;
+    right: 200px;
     width: 170px;
-    z-index: 999;
-    top: 40px;
+    z-index: 99999;
+    top: 119px;
 }
 .belsan_header_search_icon {
     position: absolute;
