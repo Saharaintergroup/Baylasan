@@ -31,6 +31,13 @@ header, .o_header_affix
 .o_header_affix .headr_contact_bg{
     display:none;
 }
+.o_header_affix.affixed #belsan_header_search_input{
+    position: fixed;
+    left: 200px;
+    width: 170px;
+    z-index: 99999;
+    top: 119px;
+}
 .total_pages
 {
     position: absolute;
@@ -68,6 +75,7 @@ header, .o_header_affix
     position: absolute;
     right: 105px;
     width: 170px;
+    z-index: 999;
     top: 40px;
 }
 .belsan_header_search_icon {
@@ -1225,4 +1233,11 @@ li.contact_information_item {
     font-weight: 600;
     position: relative;
     padding-bottom: 15px;
+}
+.card.js_cart_summary .card-body .coupon_form div a.btn-secondary {
+    width: 100%;
+    padding: 6px 20px;
+    margin: 8px;
+    border-radius: 5px;
+    margin-top: 1px;
 }

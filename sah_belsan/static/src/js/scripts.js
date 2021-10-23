@@ -49,7 +49,7 @@ $(function() {
                 items: 5
             },
             1200: {
-                items: 10
+                items: 7
             }
         },
     })

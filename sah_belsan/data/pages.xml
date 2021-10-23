@@ -147,8 +147,8 @@
                                                     <div class="home_client_img_container">
 <!--                                                        <img t-att-src="'/web/image/product.brand/%s/image_1920' % brand.logo" class="d-block img-fluid" alt="..."/>-->
 <!--                                                        <img t-att-src="'data:image/png;base64,%s' % (brand.id)" class="d-block img-fluid" alt="..."/>-->
-                                                    <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"
-                                                             class="d-block img-fluid" alt="..."/>
+                                                        <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"
+                                                                 class="d-block img-fluid" alt="..."/>
                                                     </div>
                                                 </div>
                                             </t>
@@ -389,23 +389,23 @@
                                     <!--                                        <div class="col-lg-6">-->
                                     <form id="contactus_form" action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
                                         <div class="form-group form-field o_website_form_required_custom">
-                                            <label for="contact_name">الإسم ثلاثي</label>
+<!--                                            <label for="contact_name">الإسم ثلاثي</label>-->
                                             <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="الإسم ثلاثي*" name="contact_name" required=""/>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-                                            <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>
+<!--                                            <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>-->
                                             <div class="col-md-12">
                                                 <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder="البريد الإلكتروني*" required="" t-att-value="request.params.get('email_from', '')"/>
                                             </div>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-                                            <label class="col-md-12 col-form-label" for="name">موضوع</label>
+<!--                                            <label class="col-md-12 col-form-label" for="name">موضوع</label>-->
                                             <div class="col-md-12">
                                                 <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
                                             </div>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-                                            <label class="col-md-12 col-form-label" for="description">رسالتك</label>
+<!--                                            <label class="col-md-12 col-form-label" for="description">رسالتك</label>-->
                                             <div class="col-md-12">
                                                 <textarea class="form-control o_website_form_input custom_contact_us_form" placeholder="قم بترك رسالتك هنا*" rows="9" name="description" required=""><t t-esc="request.params.get('description', '')"/></textarea>
                                             </div>

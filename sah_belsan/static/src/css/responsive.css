@@ -1,6 +1,77 @@
-@media (min-width:1500px) and (max-width:2100px){
+@media (max-width:2500px){
     .total_pages {
-        left: 29%;
+        left: 34%;
+    }
+     #top_menu_login {
+        right: 30%;
+    }
+    .lang_list_header {
+        right: 35.5%;
+    }
+    .belsan_header_search_icon {
+        right: 125px;
+    }
+    li#my_cart a {
+        right: -37rem;
+    }
+    li#my_wish a {
+        right: -34rem;
+    }
+    .belsan_header_search_icon {
+        right: 33px;
+    }
+    .contact_panner_pages {
+        background-size: 100%;
+        padding: 27rem 11rem 13rem;
+    }
+}
+@media (min-width:1500px) and (max-width:2200px){
+    .total_pages {
+        left: 26%;
+    }
+}
+@media (max-width:2200px){
+    .total_pages {
+        left: 19%;
+    }
+     #top_menu_login {
+        right: 30%;
+    }
+    .lang_list_header {
+        right: 35%;
+    }
+    .belsan_header_search_icon {
+        right: 125px;
+    }
+    li#my_cart a {
+        right: -37rem;
+    }
+    li#my_wish a {
+        right: -34rem;
+    }
+    .belsan_header_search_icon {
+        right: 55px;
+    }
+    .contact_panner_pages {
+        background-size: 100%;
+        padding: 11rem 11rem 13rem;
+    }
+}
+@media (max-width:2100px){
+     #top_menu_login {
+        right: 29%;
+    }
+    .lang_list_header {
+        right: 35%;
+    }
+    .belsan_header_search_icon {
+        right: 125px;
+    }
+    li#my_cart a {
+        right: -37rem;
+    }
+    li#my_wish a {
+        right: -34rem;
     }
 }
 @media (max-width:1990px){
@@ -59,7 +130,7 @@
         right: 22%;
     }
     .lang_list_header {
-        right: 30%;
+        right: 32%;
     }
     .belsan_header_search_icon {
         right: 110px;
@@ -76,7 +147,7 @@
         right: 18.5%;
     }
     .lang_list_header {
-        right: 27%;
+        right: 29%;
     }
     .belsan_header_search_icon {
         right: 110px;
