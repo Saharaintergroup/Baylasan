@@ -184,22 +184,22 @@
         bottom: 0;
     }
     #top_menu_login {
-        right: 22%;
+        right: 19%;
     }
     .lang_list_header {
-        right: 33%;
+        right: 31%;
     }
     .belsan_header_search_icon {
-        right: 135px;
+        right: 98px;
     }
     .total_pages {
         right: 25%;
     }
     li#my_cart a {
-        right: -11rem;
+        right: -13rem;
     }
     li#my_wish a {
-        right: -8rem;
+        right: -10rem;
     }
 }
 @media (max-width: 991px){
