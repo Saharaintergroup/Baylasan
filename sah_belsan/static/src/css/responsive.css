@@ -196,10 +196,10 @@
         right: 25%;
     }
     li#my_cart a {
-        right: -22rem;
+        right: -11rem;
     }
     li#my_wish a {
-        right: -19rem;
+        right: -8rem;
     }
 }
 @media (max-width: 991px){
