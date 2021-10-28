@@ -12,6 +12,9 @@
                 <xpath expr="//field[@name='public_categ_ids']" position="attributes">
                     <attribute name="string">eCommerce Categories</attribute>
                 </xpath>
+                <field name="company_id" position="after">
+                    <field name="custom_discount" invisible="1"/>
+                </field>
 
             </field>
         </record>
