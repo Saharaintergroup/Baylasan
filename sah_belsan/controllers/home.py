@@ -9,7 +9,7 @@ class WebsiteSort(Home):
         super(WebsiteSort, self).index()
         Product = request.env['product.template'].with_context(bin_size=True)
         Category = request.env['product.public.category']
-        brands = request.env['product.brand'].search([])
+        brands = request.env['product.brand'].search([('is_published_brand', '=', True)])
         new_products = Product.search([('is_published', '=', True)], order="create_date DESC", limit=8)
         # offers_products = Product.search([('is_published', '=', True), ('is_offers', '=', True)])
         # popular_products = Product.search([('is_published', '=', True), ('is_popular', '=', True)])

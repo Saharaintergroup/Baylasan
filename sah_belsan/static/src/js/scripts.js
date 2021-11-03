@@ -57,6 +57,7 @@ $(function() {
         items: 4,
         margin: 1,
         nav: true,
+        autoplay : true,
         rtl:true,
         dots: false,
         responsive: {
@@ -74,6 +75,7 @@ $(function() {
     $('.product_brand_slider').owlCarousel({
         items: 5,
         margin: 1,
+        autoplay : true,
         nav: true,
         rtl:true,
         loop:true,

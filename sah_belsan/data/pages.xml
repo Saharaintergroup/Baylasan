@@ -80,9 +80,6 @@
                                             <div class="new_product_container">
                                                 <h3>أفضل العروض والخصومات</h3>
                                             </div>
-                                            <div class="home_offer_percent">
-                                                <h4>خصومات تصل إلي 70% </h4>
-                                            </div>
                                         </div>
                                         <div class="col-md-6 mt-2">
                                             <div class="row">
@@ -142,13 +139,15 @@
                                             </div>
                                         </div>
                                         <div class="owl-carousel owl-theme product_brand_slider">
-                                            <t t-foreach="total_brand" t-as="brand">
+                                            <t t-foreach="brands" t-as="brand">
                                                 <div class="center">
                                                     <div class="home_client_img_container">
 <!--                                                        <img t-att-src="'/web/image/product.brand/%s/image_1920' % brand.logo" class="d-block img-fluid" alt="..."/>-->
-<!--                                                        <img t-att-src="'data:image/png;base64,%s' % (brand.id)" class="d-block img-fluid" alt="..."/>-->
-                                                        <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"
-                                                                 class="d-block img-fluid" alt="..."/>
+<!--                                                        <img t-att-src="'data:image/png;base64,%s' % (brand.logo)" class="d-block img-fluid" alt="..."/>-->
+                                                        <img t-att-src="'data:image/png;base64,%s' % to_text(brand.logo)"
+                                                             class="img-fluid"/>
+<!--                                                        <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"-->
+<!--                                                                 class="d-block img-fluid" alt="..."/>-->
                                                     </div>
                                                 </div>
                                             </t>
@@ -176,18 +175,18 @@
                                             <form id="contactus_form" style="padding: 0;border: none;" action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
                                                 <div class="form-group form-field o_website_form_required_custom">
                                                     <label for="contact_name">الإسم ثلاثي</label>
-                                                    <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="الإسم ثلاثي*" name="contact_name" required=""/>
+                                                    <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="احمد محمد*" name="contact_name" required=""/>
                                                 </div>
                                                 <div class="form-group row form-field o_website_form_required_custom">
                                                     <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>
                                                     <div class="col-md-12">
-                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder="البريد الإلكتروني*" required="" t-att-value="request.params.get('email_from', '')"/>
+                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder=" test@test.com*" required="" t-att-value="request.params.get('email_from', '')"/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row form-field o_website_form_required_custom">
                                                     <label class="col-md-12 col-form-label" for="name">موضوع</label>
                                                     <div class="col-md-12">
-                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
+                                                        <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار الخاص بك*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row form-field o_website_form_required_custom">
