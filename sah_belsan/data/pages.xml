@@ -14,7 +14,8 @@
             <field name="arch" type="xml">
                 <t name="Home belsan" priority="20" t-name="sah_belsan.home_page_template">
                     <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure oe_website_sale ">
+                        <div id="loader"></div>
+                        <div id="wrap" onload="loaderFunction()" class="oe_structure oe_website_sale ">
 
                             <!--                        <t t-call="sah_belsan.homepage_categories"/>-->
                             <section class="oe_structure home_banner">
@@ -86,7 +87,10 @@
                                                 <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
                                                     <img src="/sah_belsan/static/src/img/offer_product1.png" class="d-block w-100" alt="..."/>
                                                     <div class="home_offer_product_percent">
-                                                        <a t-attf-href="/shop/offer/{{offers[0]['offer_id']}}">خصومات تصل إلي <span t-esc="offers[0]['offer_percentage']"/>%  </a>
+                                                        <t t-if="offers">
+                                                            <a t-attf-href="/shop/offer/{{offers[0]['offer_id']}}">خصومات تصل إلي <span t-esc="offers[0]['offer_percentage']"/>%  </a>
+                                                        </t>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,7 +98,9 @@
                                                 <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
                                                     <img src="/sah_belsan/static/src/img/offer_product2.png" class="d-block w-100" alt="..."/>
                                                     <div class="home_offer_product_percent">
-                                                        <a t-attf-href="/shop/offer/{{offers[1]['offer_id']}}">خصومات تصل إلي<span t-esc="offers[1]['offer_percentage']"/>% </a>
+                                                        <t t-if="offers">
+                                                            <a t-attf-href="/shop/offer/{{offers[1]['offer_id']}}">خصومات تصل إلي<span t-esc="offers[1]['offer_percentage']"/>% </a>
+                                                        </t>
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,12 +148,12 @@
                                             <t t-foreach="brands" t-as="brand">
                                                 <div class="center">
                                                     <div class="home_client_img_container">
-<!--                                                        <img t-att-src="'/web/image/product.brand/%s/image_1920' % brand.logo" class="d-block img-fluid" alt="..."/>-->
-<!--                                                        <img t-att-src="'data:image/png;base64,%s' % (brand.logo)" class="d-block img-fluid" alt="..."/>-->
+                                                        <!--                                                        <img t-att-src="'/web/image/product.brand/%s/image_1920' % brand.logo" class="d-block img-fluid" alt="..."/>-->
+                                                        <!--                                                        <img t-att-src="'data:image/png;base64,%s' % (brand.logo)" class="d-block img-fluid" alt="..."/>-->
                                                         <img t-att-src="'data:image/png;base64,%s' % to_text(brand.logo)"
                                                              class="img-fluid"/>
-<!--                                                        <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"-->
-<!--                                                                 class="d-block img-fluid" alt="..."/>-->
+                                                        <!--                                                        <img t-att-src="'/web/image/product.brand/%s/image' % brand.id"-->
+                                                        <!--                                                                 class="d-block img-fluid" alt="..."/>-->
                                                     </div>
                                                 </div>
                                             </t>
@@ -388,23 +394,23 @@
                                     <!--                                        <div class="col-lg-6">-->
                                     <form id="contactus_form" action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
                                         <div class="form-group form-field o_website_form_required_custom">
-<!--                                            <label for="contact_name">الإسم ثلاثي</label>-->
+                                            <!--                                            <label for="contact_name">الإسم ثلاثي</label>-->
                                             <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="الإسم ثلاثي*" name="contact_name" required=""/>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-<!--                                            <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>-->
+                                            <!--                                            <label class="col-md-12 col-form-label" for="email_from">البريد الإلكتروني</label>-->
                                             <div class="col-md-12">
                                                 <input type="text" class="form-control o_website_form_input custom_contact_us_form" name="email_from" placeholder="البريد الإلكتروني*" required="" t-att-value="request.params.get('email_from', '')"/>
                                             </div>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-<!--                                            <label class="col-md-12 col-form-label" for="name">موضوع</label>-->
+                                            <!--                                            <label class="col-md-12 col-form-label" for="name">موضوع</label>-->
                                             <div class="col-md-12">
                                                 <input type="text" class="form-control o_website_form_input custom_contact_us_form" placeholder="موضوع الإستفسار*" name="name" required="" t-att-value="request.params.get('partner_name', '')"/>
                                             </div>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-<!--                                            <label class="col-md-12 col-form-label" for="description">رسالتك</label>-->
+                                            <!--                                            <label class="col-md-12 col-form-label" for="description">رسالتك</label>-->
                                             <div class="col-md-12">
                                                 <textarea class="form-control o_website_form_input custom_contact_us_form" placeholder="قم بترك رسالتك هنا*" rows="9" name="description" required=""><t t-esc="request.params.get('description', '')"/></textarea>
                                             </div>

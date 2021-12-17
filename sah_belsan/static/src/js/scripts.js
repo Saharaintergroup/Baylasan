@@ -22,7 +22,26 @@ $(function() {
    if($(".wow").length){
        new WOW().init();
    }
+//   var myVar;
+//   $('#wrap').on('click', function(){
+//      myVar = setTimeout(showPage, 3000);
+//    });
+//
+//   function showPage() {
+//      document.getElementById("loader").style.display = "none";
+//      document.getElementById("wrap").style.display = "block";
+//    }
 })
+
+//var myVar;
+//function loaderFunction() {
+//  myVar = setTimeout(showPage, 1000);
+//}
+//function showPage() {
+//  document.getElementById("loader").style.display = "none";
+//  document.getElementById("wrap").style.display = "block";
+//}
+
 $(function() {
     'use strict';
     $('.owl-quick-access').owlCarousel({
@@ -93,7 +112,6 @@ $(function() {
         },
     });
 })
-
 
 function searchFun() {
   var x = document.getElementById("belsan_header_search_input");
