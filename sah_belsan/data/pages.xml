@@ -82,30 +82,31 @@
                                                 <h3>أفضل العروض والخصومات</h3>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mt-2">
-                                            <div class="row">
-                                                <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
-                                                    <img src="/sah_belsan/static/src/img/offer_product1.png" class="d-block w-100" alt="..."/>
-                                                    <div class="home_offer_product_percent">
-                                                        <t t-if="offers">
-                                                            <a t-attf-href="/shop/offer/{{offers[0]['offer_id']}}">خصومات تصل إلي <span t-esc="offers[0]['offer_percentage']"/>%  </a>
-                                                        </t>
+<!--                                        <div class="col-md-6 mt-2">-->
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">-->
+<!--                                                    <img src="/sah_belsan/static/src/img/offer_product1.png" class="d-block w-100" alt="..."/>-->
+<!--                                                    <t t-if="offers">-->
+<!--                                                        <div class="home_offer_product_percent">-->
+<!--                                                            <a t-attf-href="/shop/offer/{{offers[0]['offer_id']}}">خصومات تصل إلي <span t-esc="offers[0]['offer_percentage']"/>%  </a>-->
+<!--                                                        </div>-->
+<!--                                                    </t>-->
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">
-                                                    <img src="/sah_belsan/static/src/img/offer_product2.png" class="d-block w-100" alt="..."/>
-                                                    <div class="home_offer_product_percent">
-                                                        <t t-if="offers">
-                                                            <a t-attf-href="/shop/offer/{{offers[1]['offer_id']}}">خصومات تصل إلي<span t-esc="offers[1]['offer_percentage']"/>% </a>
-                                                        </t>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div></div>
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-md-12 home_offer_promotion wow bounceLeft" style="visibility: visible; animation-name: bounceInLeft;">-->
+<!--                                                    <img src="/sah_belsan/static/src/img/offer_product2.png" class="d-block w-100" alt="..."/>-->
+<!--                                                    <t t-if="offers">-->
+<!--                                                        <div class="home_offer_product_percent">-->
+<!--                                                            <a t-attf-href="/shop/offer/{{offers[1]['offer_id']}}">خصومات تصل إلي<span t-esc="offers[1]['offer_percentage']"/>% </a>-->
+<!--                                                        </div>-->
+<!--                                                    </t>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+                                    </div>
+                                </div>
                             </section>
 
                             <t t-call="sah_belsan.product_new" />
