@@ -28,14 +28,14 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/assets.xml',
-        'views/templates.xml',
-        'views/product.xml',
-        'views/products_offer.xml',
-        'views/slider_products.xml',
-        'views/rescompany.xml',
-        'data/pages.xml',
+        # 'views/views.xml',
+        # 'views/assets.xml',
+        # 'views/templates.xml',
+        # 'views/product.xml',
+        # 'views/products_offer.xml',
+        # 'views/slider_products.xml',
+        # 'views/rescompany.xml',
+        # 'data/pages.xml',
 
     ],
     # only loaded in demonstration mode
