@@ -11,7 +11,7 @@
     'website': " ",
     'category': 'Theme/Ecommerce',
     'version': '0.1',
-    'depends': ['base', 'website', 'website_theme_install', 'sah_belsan'],
+    'depends': ['base', 'website'],
     'data': [
         'views/customize_template.xml',
         'views/views.xml',
