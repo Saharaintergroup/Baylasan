@@ -5,7 +5,7 @@ from odoo import http
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.website_sale.controllers.main import PPG, TableCompute, PPR
+from odoo.addons.website_sale.controllers.main import TableCompute
 from odoo.http import request
 
 
@@ -15,7 +15,7 @@ class WebsiteSale(WebsiteSale):
         '''/shop/offer/<int:offer_id>'''
     ], type='http', auth="public", website=True)
     def shop_discount(self, page=0, category=None, offer_id=False, search='', ppg=False, **post):
-        print("/*",offer_id)
+        print("/*", offer_id)
         if not offer_id:
             return request.redirect('/')
         add_qty = int(post.get('add_qty', 1))
@@ -24,14 +24,14 @@ class WebsiteSale(WebsiteSale):
             if not category or not category.can_access_from_current_website():
                 raise NotFound()
 
-        if ppg:
-            try:
-                ppg = int(ppg)
-            except ValueError:
-                ppg = PPG
-            post["ppg"] = ppg
-        else:
-            ppg = PPG
+        # if ppg:
+        #     try:
+        #         ppg = int(ppg)
+        #     except ValueError:
+        #         ppg = PPG
+        #     post["ppg"] = ppg
+        # else:
+        #     ppg = PPG
 
         attrib_list = request.httprequest.args.getlist('attrib')
         attrib_values = [[int(x) for x in v.split("-")] for v in attrib_list if v]
