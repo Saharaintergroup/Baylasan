@@ -13,9 +13,9 @@
     'version': '0.1',
     'depends': ['base', 'website'],
     'data': [
-        'views/customize_template.xml',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'views/customize_template.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
     ],
     'images': [
         'static/description/icon.png',
