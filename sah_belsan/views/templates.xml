@@ -2,9 +2,9 @@
     <data>
         <template id="header_layout_1" active="True" inherit_id="website.layout">
 
-            <xpath expr="//header/nav[hasclass('navbar-expand-md')]" position="attributes">
-                <attribute name="class">navbar navbar-expand-lg navbar-light navbar-fixed-top pages_nav</attribute>
-            </xpath>
+<!--            <xpath expr="//header/nav[hasclass('navbar-expand-md')]" position="attributes">-->
+<!--                <attribute name="class">navbar navbar-expand-lg navbar-light navbar-fixed-top pages_nav</attribute>-->
+<!--            </xpath>-->
 
             <xpath expr="//header/nav/div/div[hasclass('navbar-collapse')]" position="attributes">
                 <attribute name="class">collapse navbar-collapse justify-content-end</attribute>
