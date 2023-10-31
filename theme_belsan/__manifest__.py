@@ -22,4 +22,5 @@
     ],
     'live_test_url': '',
     'application': False,
+    'license': 'LGPL-3',
 }

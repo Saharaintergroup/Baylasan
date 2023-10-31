@@ -10,6 +10,7 @@
         'views/views.xml',
 
     ],
+    'license': 'LGPL-3',
     # only loaded in demonstration mode
 
 }

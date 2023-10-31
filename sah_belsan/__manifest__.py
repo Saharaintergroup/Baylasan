@@ -24,6 +24,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base','website','website_sale','website_sale_wishlist'],
+    'license': 'LGPL-3',
 
     # always loaded
     'data': [
