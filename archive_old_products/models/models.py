@@ -8,9 +8,12 @@ class InheritProduct(models.Model):
     old_products = fields.Boolean(compute="_get_old_compute",search="_get_old_products")
 
     def _get_old_compute(self):
-        for product in self.search([('qty_available', '=', 0)]):
-            if not self.env['stock.move'].search([('product_id', '=', product.id)]):
-                product.old_products = True
+        for product in self:
+            if product.qty_available == 0:
+                if not self.env['stock.move'].search([('product_id', '=', product.id)]):
+                    product.old_products = True
+                    continue
+            product.old_products = False
 
     def _get_old_products(self, operator, value):
 
